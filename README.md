@@ -102,7 +102,7 @@ python buildmsa.py --outpath='results/Baltimore-Columbia-Towson, MD' --bbox='-77
 
 # Output
 
-## operators.geojson feeature properties
+## operators.geojson feature properties
 
 API Response:
 
