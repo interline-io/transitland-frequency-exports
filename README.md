@@ -42,6 +42,8 @@ The bounding box `--bbox` is specified using `left,bottom,right,top` coordinates
 
 ## Headway calculation
 
+![headway calculation diagram](transitland-headway-calculations.png)
+
 Headways are defined by `origin:destination` pairs. This helps ensure that each direction of travel is considered separately, and helps when measuring interlined service. 
 
 _Vermillion Route_
