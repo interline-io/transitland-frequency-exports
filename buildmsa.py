@@ -123,7 +123,7 @@ if __name__ == "__main__":
     parser.add_argument('--departure_span', default="00:00", help='Duration each day that stop or route must have service')
     parser.add_argument('--headway_percentile', default="0.5", type=float, help='Headway percentile, from 0.0 to 1.0, for high frequency service')
     parser.add_argument('--high_frequency_headway', default=900, type=int, help='Threshold, in seconds, for high frequency service')
-    parser.add_argument('--endpoint', default="http://transit.land", help='Transitland API endpoint')
+    parser.add_argument('--endpoint', default="https://transit.land", help='Transitland API endpoint')
     parser.add_argument('--outpath', default='.', help='Output directory')
 
     args = parser.parse_args()
@@ -138,9 +138,9 @@ if __name__ == "__main__":
 
     ds = Datastore(args.endpoint)
     hw = dict(
-        dates=args.dates,
-        origin_departure_between=args.between, 
-        departure_span=args.departure_span, 
+        headway_dates=args.dates,
+        headway_departure_between=args.between,
+        headway_departure_span=args.departure_span,
         headway_percentile=args.headway_percentile,
         high_frequency_headway=args.high_frequency_headway
     )
